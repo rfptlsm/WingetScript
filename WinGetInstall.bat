@@ -7,7 +7,7 @@ where /q winget
 IF %ERRORLEVEL% EQU 1 (
 echo WinGet will be installed...
 
-powershell "Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.3.2091/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "%USERPROFILE%\Downloads\WinGet.msixbundle""
+powershell "Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "%USERPROFILE%\Downloads\WinGet.msixbundle""
 powershell "Add-AppxPackage "%USERPROFILE%\Downloads\WinGet.msixbundle""
 del "%USERPROFILE%\Downloads\WinGet.msixbundle"
 
